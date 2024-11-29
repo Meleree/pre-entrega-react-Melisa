@@ -1,0 +1,30 @@
+.botonera {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    padding: 0.5rem 1rem;
+    background-color: #343a40; 
+    z-index: 9999; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-right: 10px;
+    height: 30px;
+    width: auto;
+}
+
+.categorias {
+    display: flex;
+    gap: 20px;
+    color: white;
+    padding: 20; 
+}
+
+.cart-widget {
+    margin-left: 10px; 
+}
