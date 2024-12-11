@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: black;
+}
+
+.search-container {
+  margin-top: 20px;  
+  padding: 10px;     
+  text-align: center; 
+}
+
+#search-input {
+  width: 300px; 
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}

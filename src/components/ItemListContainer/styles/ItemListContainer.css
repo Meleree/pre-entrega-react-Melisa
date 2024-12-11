@@ -1,0 +1,34 @@
+.ItemListContainer {
+    padding: 1.25rem;  
+    text-align: center; 
+    margin-top: 1.25rem;        
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #ccc;  
+    margin-bottom: 1.25rem;
+    font-family: 'Arial', sans-serif;  
+  }
+  
+  .search-container {
+    margin-top: 2.5rem;
+    text-align: center; 
+  }
+  
+  #search-input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 80%;  
+    max-width: 25rem; 
+    border: .0625rem solid #ccc; 
+    border-radius: .25rem;  
+    outline: none;
+    margin-top: 1.25rem; 
+  }
+  
+  #search-input:focus {
+    border-color: #6324d7fb;  
+    box-shadow: 0 0 .3125rem rgba(0, 123, 255, 0.5); 
+  }
+  

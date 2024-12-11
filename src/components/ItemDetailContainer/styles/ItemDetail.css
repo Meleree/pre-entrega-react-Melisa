@@ -1,0 +1,51 @@
+.ItemDetail {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 1.25rem;
+    max-width: 75rem; 
+    margin: 2.5rem auto; 
+    background-color: #1c1c1c;
+    border-radius: .5rem; 
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.1); 
+  }
+  
+  .ItemDetail img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: .5rem; 
+    margin-bottom: 1.25rem; 
+  }
+  
+  .ItemDetail h2 {
+    font-size: 2rem;
+    color: #ccc; 
+    margin-bottom: .9375rem; 
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .ItemDetail p {
+    font-size: 1.1rem; 
+    color: #ccc; 
+    line-height: 1.5; 
+    text-align: center; 
+    max-width: 900px; 
+    margin-bottom: 20px; 
+  }
+  
+  @media (max-width: 768px) {
+    .ItemDetail {
+      padding: .9375rem; 
+      margin: 1.25rem; 
+    }
+  
+    .ItemDetail h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .ItemDetail p {
+      font-size: 1rem; 
+    }
+  }
+  
