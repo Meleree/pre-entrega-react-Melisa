@@ -1,22 +1,80 @@
-.ItemList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 1.25rem;
+.item-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10rem;
+  padding: 10rem;
+  border: 2px solid #6324d7fb;  
+  border-radius: 0.5rem;
 }
-.text-item {
-    color: #f8f9fa;  
-    font-size: 1rem; 
-    font-family: 'Arial', sans-serif; 
-    text-align: center; 
-    padding: 0.5rem 0;
-    margin: 0;
-    transition: color 0.3s ease; 
-  }
-  
-  
-  .text-item:hover {
-    color: #6324d7fb;
-  }
-  
+
+.images-detail-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #6324d7fb;  
+  border-radius: 0.5rem;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 500px;  
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-detail-container {
+  flex: 1;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.title-detail {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text-detail {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.price-detail {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6324d7fb;
+}
+
+.text-detail-container p {
+  margin-bottom: 1.5rem;
+}
+
+.secondary-images {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.secondary-images img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.secondary-images img:hover {
+  transform: scale(1.1); 
+}
+
+.text-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

@@ -15,9 +15,9 @@ const NavBar = () => {
             <img src="../../../src/assets/melere.webp"></img>   
         </NavLink>
         <ul className='categories'>
-            <NavLink to="/category/abrigos" className={ ( { isActive} ) => isActive ? "category-active" : "category" }>ABRIGOS</NavLink>
-            <NavLink to="/category/remeras" className={ ( { isActive} ) => isActive ? "category-active" : "category" }>REMERAS</NavLink>
-            <NavLink to="/category/accesorios" className={ ( { isActive} ) => isActive ? "category-active" : "category" }>ACCESORIOS</NavLink>
+            <NavLink to="/category/abrigos" className={ ( { isActive } ) => isActive ? "category-active" : "category" }>ABRIGOS</NavLink>
+            <NavLink to="/category/remeras" className={ ( { isActive } ) => isActive ? "category-active" : "category" }>REMERAS</NavLink>
+            <NavLink to="/category/accesorios" className={ ( { isActive } ) => isActive ? "category-active" : "category" }>ACCESORIOS</NavLink>
         </ul>
         <CartWidget />
     </nav>

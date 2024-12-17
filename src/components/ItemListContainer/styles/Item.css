@@ -8,6 +8,8 @@
   box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);  
   width: 15.625rem;  
   height: 15.625rem;
+  border: 2px solid #6324d7fb;  
+  border-radius: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }
 
@@ -35,7 +37,7 @@
 }
 
 .text-item {
-  color: #f8f9fa;  
+  color: #ccc;  
   font-size: 1rem; 
   font-family: 'Arial', sans-serif; 
   text-align: center; 
@@ -46,5 +48,5 @@
 
 
 .text-item:hover {
-  color: #6324d7fb;
+  color: #410a9a;
 }

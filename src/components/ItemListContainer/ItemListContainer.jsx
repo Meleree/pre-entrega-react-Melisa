@@ -6,46 +6,39 @@ import { RingLoader } from 'react-spinners';
 import './styles/ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const { idCategory } = useParams();
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(false)
 
-    useEffect(() => {
-      setLoading(true);
+  const { idCategory } = useParams()
 
-      getProducts()
-        .then((data) => {
-          if(idCategory) {
-            const filterProducts = data.filter((product) => product.category === idCategory);
-            setProducts(filterProducts);
-          } else {
-            setProducts(data);
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }, [idCategory]);
+  useEffect(() => {
+    setLoading(true)
 
-    return (
-      <div className="ItemListContainer">
-        <h1>{greeting}</h1>
-        {
-          loading ? (
-            <div style={{ height: "200px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <RingLoader color="purple" />
-            </div>
-          ) : (
-            <div className="item-list-container">
-              <ItemList products={products} />
-            </div>
-          )
+    getProducts()
+      .then((data) => {
+
+        if (idCategory) {
+          const productsFilter = data.filter((product) => product.category === idCategory)
+          setProducts(productsFilter)
+        } else {
+          setProducts(data)
         }
-      </div>
-    );
-};
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }, [idCategory])
 
-export default ItemListContainer;
+  return (
+    <div className="itemlistcontainer">
+      <h1>{greeting}</h1>
+      {
+        loading === true ? (<div style={{ height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}> <SyncLoader color="lime" /> </div>) : (<ItemList products={products} />)
+      }
+    </div>
+  )
+}
+export default ItemListContainer

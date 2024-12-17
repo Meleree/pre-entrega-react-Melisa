@@ -2,24 +2,24 @@ const products = [
   {
     id: "r11",
     name: "Remera Fire",
-    description: "Remera manga corta. Cuello redondo. Fabricada en algodon. Over size. Unisex",
+    description: "Remera manga larga. Cuello redondo. Fabricada en algodon. Over size. Unisex",
     price: 500,
     stock: 10,
     category: "remeras",
-    image: "/img/reme-fire.webp",  
+    image: ["/img/reme-fire.webp","/img/reme-fire2.webp","/img/talle.webp"],  
     size: ["S", "M", "L", "XL", "XXL"],
     colour: ["Black"]
   },
   {
     id: "b11",
-    name: "Buzo Star",
+    name: "Buzo Incoherent",
     description: "Buzo manga larga. Cuello redondo. Fabricado en algodon",
     price: 900,
     stock: 4,
     category: "abrigos",
-    image: "/img/buzo-star.webp",  
+    image: ["/img/buzo-incoherent.webp","img/buzo-ingo.webp","/img/talle.webp"],  
     size: ["S", "M", "L", "XL", "XXL"],
-    colour: ["red", "green"]
+    colour: ["black"]
   },
   {
     id: "a11",
@@ -28,18 +28,18 @@ const products = [
     price: 100,
     stock: 2,
     category: "accesorios",
-    image: "/img/medias-puas.webp", 
+    image: ["/img/medias-puas.webp"], 
     size: ["Unico"],
     colour: ["Black"]
   },    
   {
     id: "r22",
-    name: "Remera Basic",
+    name: "Remera Some Love",
     description: "Remera manga corta. Cuello redondo. Fabricada en algodon. Over size. Unisex",
     price: 500,
     stock: 10,
     category: "remeras",
-    image: "/img/reme-basic.webp",  
+    image: ["/img/reme-some-love.webp","/img/reme-some-love2.webp","/img/talle.webp"],  
     size: ["S", "M", "L", "XL", "XXL"],
     colour: ["Black"]
   },
@@ -50,7 +50,7 @@ const products = [
     price: 900,
     stock: 4,
     category: "abrigos",
-    image: "/img/buzo-some-love.webp",  
+    image: ["/img/buzo-some-love.webp","/img/buzo-some-love.webp","/img/talle.webp"],  
     size: ["S", "M", "L", "XL", "XXL"],
     colour: ["red", "green"]
   },
@@ -61,7 +61,7 @@ const products = [
     price: 100,
     stock: 2,
     category: "accesorios",
-    image: "/img/medias-shine.webp", 
+    image: ["/img/medias-shine.webp"], 
     size: ["Unico"],
     colour: ["Black"]
   }

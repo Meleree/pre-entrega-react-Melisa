@@ -1,0 +1,25 @@
+.footerStyle {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.socialLinksStyle {
+    margin-bottom: 10px;
+}
+
+.linkStyle {
+    margin: 0 10px;
+}
+
+.iconStyle {
+    width: 40px;
+    height: 40px;
+}
+
+.copyrightStyle {
+    font-size: 14px;
+    margin-top: 10px;
+}

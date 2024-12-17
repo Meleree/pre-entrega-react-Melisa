@@ -1,25 +1,26 @@
-import NavBar from './components/ItemListContainer/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import Footer from './components/Footer/Footer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from "./components/ItemListContainer/NavBar/NavBar"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ContadorEventListener from "./components/ejemplo/ContadorEventListener"
+import Formulario from "./components/Form/Formulario"
 import './App.css'
-
 
 function App() {
 
   return (
-    <div className='container-app'>
+    <div className="container-app" >
       <BrowserRouter>
         <NavBar />
+
         <Routes>
-        <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
+          <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
           <Route path="/category/:idCategory" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
           <Route path="/detail/:idProduct" element={<ItemDetailContainer />} />
-          <Route path="*" element={ <div>Error 404 - pagina no encontrada</div>} />
+          <Route path="/ejemplos" element={<ContadorEventListener />} />
+          <Route path="/formulario" element={<Formulario />} />
         </Routes>
-        <Footer />
+        <footer />
       </BrowserRouter>
     </div>
   )

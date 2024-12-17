@@ -1,7 +1,36 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 4rem;
   text-align: center;
-  background-color: black;
+  background-color: rgb(27, 27, 27);
+}
+
+.container-app {
+  background-color: rgb(24, 24, 24);
+  color: #ccc;
+  min-height: 100vh;
+}
+
+a {
+  color: #6324d7fb;  
+  text-decoration: none !important;  
+}
+
+a .text-item {
+  color: #6324d7fb;  
+  text-decoration: none !important;  
+}
+
+a:hover {
+  color: #6324d7fb;  
+  text-decoration: none;  
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  height: 100vh;            
+  width: 100vw;           
 }
