@@ -1,9 +1,9 @@
-import React from 'react'
-
-const Contador = () => {
+const Contador = ({ contador, aumentarContador }) => {
   return (
-    <div>Contador</div>
+    <div>
+      <p>Contador: {contador}</p>
+      <button onClick={aumentarContador} >+</button>
+    </div>
   )
 }
-
 export default Contador

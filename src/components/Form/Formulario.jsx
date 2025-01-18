@@ -21,10 +21,10 @@ const EjemploFormulario = () => {
 
   return (
     <form onSubmit={handleSubmitForm} >
-      <label>Nombre</label>
+      <label>NOMBRE</label>
       <input type="text" value={nombre} onChange={handleChangeName} />
 
-      <label>Email</label>
+      <label>EMAIL</label>
       <input type="email" value={email} onChange={handleChangeEmail} />
 
       <button type="submit" >Enviar Formulario</button>

@@ -1,8 +1,16 @@
-# React + Vite
+Ecommerce creado con React JS
+##### Dev - Melisa Lettiere
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAmafdPNr9fd0KC0Z98WYEC7Wl1wYlPVf-A&s" width="50 px" heigth= "50px">
 
-Currently, two official plugins are available:
+## Descripcion:
+Ecommerce de tienda de ropa sin genero, look total black, oversize
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependencias:
+'firebase'
+'react-dom'
+'react-router-dom'
+'react-icons'
+'react-spinners'
+'react-toastify'
+'yup'

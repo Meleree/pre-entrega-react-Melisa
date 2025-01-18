@@ -1,10 +1,12 @@
-import NavBar from "./components/ItemListContainer/NavBar/NavBar"
+import NavBar from "./components/NavBar/NavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import Footer from "./components/Footer/Footer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ContadorEventListener from "./components/ejemplo/ContadorEventListener"
-import Formulario from "./components/Form/Formulario"
+import { CartProvider } from "./Context/CartContext" 
+import Cart from "./components/Cart/Cart"
+import Checkout from "./components/Checkout/Checkout"
+import Footer from '../src/components/Footer/Footer'
+import { ToastContainer } from "react-toastify"
 import './App.css'
 
 function App() {
@@ -12,15 +14,18 @@ function App() {
   return (
     <div className="container-app" >
       <BrowserRouter>
-        <NavBar />
+        <CartProvider>
+          <NavBar />
+          <ToastContainer theme="dark" position="bottom-center" />
 
-        <Routes>
-          <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
-          <Route path="/category/:idCategory" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
-          <Route path="/detail/:idProduct" element={<ItemDetailContainer />} />
-          <Route path="/ejemplos" element={<ContadorEventListener />} />
-          <Route path="/formulario" element={<Formulario />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting={"BIENVENIDOS"} />} />
+            <Route path="/category/:idCategory" element={<ItemListContainer greeting={"BIENVENIDOS"} />} />
+            <Route path="/detail/:idProduct" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+        </CartProvider>
         <Footer />
       </BrowserRouter>
     </div>

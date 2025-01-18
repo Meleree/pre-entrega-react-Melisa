@@ -1,0 +1,41 @@
+
+.item-count{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .item-count .controls-count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .controls-count button{
+    width: 40px;
+    height: 40px;
+    background-color: #242424;
+    border: 1px solid #6324d7fb;
+    border-radius: 5px;
+    color: #6324d7fb;
+  }
+  .controls-count button:hover{
+    border: 1px solid #240163fb;
+    cursor: pointer;
+  }
+  .controls-count p{
+    font-weight: bold;
+  }
+  
+  .button-add-count{
+    padding: 10px 0;
+    background-color: #242424;
+    border: 1px solid #6324d7fb;
+    border-radius: 5px;
+    color: #6324d7fb;
+  }
+  .button-add-count:hover{
+    border: 1px solid #240163fb;
+    color: #240163fb;
+    cursor: pointer;
+  }
+  

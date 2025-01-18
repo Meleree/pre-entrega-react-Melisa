@@ -1,31 +1,42 @@
 import { useState, useEffect } from "react"
+import Banner from "./Banner"
+import Contador from "./Contador"
 
-const ContadorEventListener = () => {
-    const [ contador, setContador ] = useState(1)
+const EjemploContador = () => {
+  const [contador, setContador] = useState(1)
+  const [toggle, setToggle] = useState(true)
 
-    const handleClickButton = () => {
-        setContador( (prevContador) => prevContador + 1 )
+  useEffect( () => {
+    console.log("1er useEffect")
+  }, [] )
 
-    }
-  
-    useEffect( () => {
-        const botonSumar = document.getElementById("botonSumar")
+  useEffect( () => {
+    console.log("2do useEffect")
+  }, [contador] )
 
-        botonSumar.addEventListener("click", handleClickButton)
+  useEffect(()=> {
+    console.log("3er useEffect")
+  })
 
-        return () => {
-            console.log("Contador en ejecucion")
-            botonSumar.removeEventListener("click", handleClickButton)
+  const aumentarContador = () => {
+    setContador(contador + 1)
+  }
+
+  const alternarToggle = () => {
+    setToggle(!toggle)
+  }
+
+  return (
+    <>
+      <Contador contador={contador} aumentarContador={aumentarContador} />
+      <div>
+        <p>Toggle: {toggle.toString()}</p>
+        <button onClick={alternarToggle} >Alternar valor</button>
+        {
+          toggle === true && <Banner />
         }
-
-    }, [] )
-  
-    return (
-    <div>
-        <p>{contador}</p>
-        <button id="botonSumar"></button>
-    </div>
+      </div>
+    </>
   )
 }
-
-export default ContadorEventListener
+export default EjemploContador

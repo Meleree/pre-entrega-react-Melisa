@@ -1,33 +1,35 @@
-import { useState, useEffect } from "react";
-import { getProducts } from "../../data/data.js";
-import { useParams } from "react-router-dom";
-import ItemDetail from './ItemDetail'
+import { useState, useEffect } from "react"
+import ItemDetail from "./ItemDetail"
+import { doc, getDoc } from "firebase/firestore"
+import db from "../../db/db.js"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({})
-  const [loading, setLoading] = useState(true)
 
   const { idProduct } = useParams()
 
-  useEffect(()=> {
-    setLoading(true)
+  const getProduct = async() => {
+    try {
+      const docRef = doc(db, "products", idProduct)
+      const dataDb = await getDoc(docRef)
 
-    getProducts()
-      .then( (data) => {
-        const productFind = data.find( (dataProduct) => dataProduct.id === idProduct )
-        setProduct(productFind)
-      })
-      .catch((error)=> console.log(error))
-      .finally( () => setLoading(false) )
+      const data = { id: dataDb.id, ...dataDb.data() }
+
+      setProduct(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(()=> {
+  
+    getProduct()
 
   }, [idProduct])
 
   return (
-    <>
-    {
-      loading === true ? ( <div>Cargando...</div> ) : <ItemDetail product={product} />
-    }
-    </>
+    <ItemDetail product={product} />
   )
 }
 export default ItemDetailContainer

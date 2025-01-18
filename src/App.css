@@ -3,11 +3,11 @@
   margin: 0 auto;
   padding-top: 4rem;
   text-align: center;
-  background-color: rgb(27, 27, 27);
+  background-color: #272727;
 }
 
 .container-app {
-  background-color: rgb(24, 24, 24);
+  background-color: #242424;
   color: #ccc;
   min-height: 100vh;
 }
@@ -23,7 +23,7 @@ a .text-item {
 }
 
 a:hover {
-  color: #6324d7fb;  
+  color: #240163fb;  
   text-decoration: none;  
 }
 
