@@ -21,6 +21,11 @@ const FormCheckout = ({ dataForm, handleChangeInput, handleSubmitForm }) => {
         <label className="label">EMAIL:</label>
         <input type="email" name="email" value={dataForm.email} onChange={handleChangeInput} />
       </div>
+
+      <div className="content-input">
+        <label className="label">REPETIR EMAIL:</label>
+        <input type="email" name="email" value={dataForm.emailRepeat} onChange={handleChangeInput} />
+      </div>
       
       <button type="submit" className="button-send-order">ENVIAR ORDEN</button>
     </form>
